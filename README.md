@@ -1,7 +1,3 @@
-Perfecto. Aquí tienes un README profesional para tu frontend en React basado en la implementación completa de las pantallas según tus wireframes y conectadas a `CoreManagerSP.API`. He dejado el espacio para que luego añadas el link de despliegue:
-
----
-
 # CoreManager Frontend
 
 Interfaz de usuario desarrollada con **React + TypeScript** para la plataforma CoreManager. Este frontend consume la API de préstamos y usuarios proporcionada por `CoreManagerSP.API`, permitiendo tanto a usuarios como administradores realizar simulaciones, ver análisis detallados y gestionar entidades del sistema.
