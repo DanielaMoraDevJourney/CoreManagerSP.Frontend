@@ -1,46 +1,140 @@
-# Getting Started with Create React App
+Perfecto. Aquí tienes un README profesional para tu frontend en React basado en la implementación completa de las pantallas según tus wireframes y conectadas a `CoreManagerSP.API`. He dejado el espacio para que luego añadas el link de despliegue:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# CoreManager Frontend
 
-In the project directory, you can run:
+Interfaz de usuario desarrollada con **React + TypeScript** para la plataforma CoreManager. Este frontend consume la API de préstamos y usuarios proporcionada por `CoreManagerSP.API`, permitiendo tanto a usuarios como administradores realizar simulaciones, ver análisis detallados y gestionar entidades del sistema.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Propósito del Proyecto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este frontend fue diseñado como parte de un sistema completo de simulación de préstamos, con funcionalidades que reflejan un análisis financiero automatizado. Su objetivo principal es permitir que los usuarios finales puedan simular y comparar opciones crediticias, recibir sugerencias de mejora y que los administradores puedan gestionar la plataforma.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades Principales
 
-### `npm run build`
+* **Autenticación con JWT** para usuarios y administradores.
+* **Simulación de préstamos completa**, con:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * Registro de datos financieros
+  * Análisis automático por entidad financiera
+  * Criterios de evaluación y recomendaciones visuales
+* **Comparación entre entidades financieras**
+* **Historial de simulaciones por usuario**
+* **Gestión de entidades financieras y tipos de préstamo** (panel de administrador)
+* **Aplicación de mejoras y reanálisis**
+* **Rutas protegidas por rol**
+* **Consumo directo de `CoreManagerSP.API` con Axios**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Roles y Acceso
 
-### `npm run eject`
+* **Usuario:** puede registrarse, iniciar sesión, simular préstamos, aplicar mejoras y comparar entidades.
+* **Administrador:** acceso exclusivo a CRUD de usuarios, entidades financieras y tipos de préstamo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tecnologías Utilizadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Herramienta           | Uso                               |
+| --------------------- | --------------------------------- |
+| React                 | Librería principal de UI          |
+| TypeScript            | Tipado estático                   |
+| React Router DOM v6   | Ruteo de la aplicación            |
+| Axios                 | Cliente HTTP para consumir la API |
+| JWT Decode            | Decodificación de tokens          |
+| SASS / MUI (opcional) | Estilización moderna y responsiva |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Estructura General del Proyecto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── api/                  # Configuración de Axios
+├── auth/                 # Helpers de autenticación
+├── components/           # Componentes reutilizables
+├── context/              # AuthContext (manejo global de sesión)
+├── pages/                # Vistas principales (Login, Simulación, Historial, etc.)
+├── routes/               # Rutas privadas y públicas
+├── styles/               # Archivos SASS globales o módulos
+└── App.tsx
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## Pantallas Incluidas
+
+1. Login de usuario y registro
+2. Simulación completa (ingreso de datos financieros)
+3. Vista de análisis y ranking de entidades
+4. Vista de análisis detallado por entidad
+5. Comparación entre entidades financieras
+6. Aplicación de mejoras y reanálisis
+7. Historial de simulaciones
+8. Panel de administración:
+
+   * CRUD de administradores
+   * CRUD de usuarios
+   * CRUD de entidades financieras
+   * CRUD de tipos de préstamo
+
+---
+
+## Instalación
+
+```bash
+git clone https://github.com/DanielaMoraDevJourney/CoreManagerSP.Frontend.git
+cd coremanager-frontend
+npm install
+```
+
+---
+
+##  Configuración
+
+Ajusta la URL de la API en `src/api/axios.ts`:
+
+```ts
+const api = axios.create({
+  baseURL: 'https://localhost:7086/api'
+});
+```
+
+---
+
+## Ejecución del Proyecto
+
+```bash
+npm run start
+```
+
+Accede a: `http://localhost:3000`
+
+---
+
+## Link de despliegue
+
+[Ver aplicación en producción]
+
+---
+
+## Autores y Créditos
+
+Proyecto desarrollado por **Daniela Mora**
+*7mo semestre de Ingeniería Web - 2025*
+
+Repositorio del backend: [CoreManagerSP.API](https://github.com/DanielaMoraDevJourney/CoreManagerSP.API)
+
+---
+
+## Licencia
+
+Este proyecto es de uso académico y puede adaptarse libremente para fines educativos.
+Se agradece dar créditos si se reutiliza con fines públicos o de aprendizaje compartido.
+
+
