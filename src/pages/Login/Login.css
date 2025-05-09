@@ -1,0 +1,211 @@
+/* === Base === */
+body {
+    background: linear-gradient(135deg, #f3edff, #e4f0fe);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    overflow: hidden;
+}
+
+
+/* === Animación de entrada === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Contenedor principal === */
+.login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* === Tarjeta de login === */
+.login__card {
+    background-color: #fff;
+    padding: 3rem 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* === Títulos === */
+.login__title {
+    font-size: 2rem;
+    color: #4A138C;
+    margin-bottom: 0.5rem;
+}
+
+.login__subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* === Tabs === */
+.login__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.login__tab {
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    color: #999;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.login__tab--active {
+    color: #5b39a8;
+    border-bottom: 2px solid #5b39a8;
+}
+
+/* === Formulario === */
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    text-align: left;
+}
+
+.login__label {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.login__input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.7rem;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.login__input:focus {
+    outline: none;
+    border-color: #5b39a8;
+    box-shadow: 0 0 0 3px rgba(113, 69, 214, 0.2);
+}
+
+/* === Extras del formulario (solo login) === */
+.login__extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #555;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.login__remember input {
+    margin-right: 0.4rem;
+}
+
+.login__forgot {
+    color: #5b39a8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login__forgot:hover {
+    color: #372d5e;
+}
+
+/* === Botón principal === */
+.login__button {
+    margin-top: 1rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.7rem;
+    background: linear-gradient(to right, #6839B6, #9A27B0);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(154, 39, 176, 0.3);
+}
+
+.login__button:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(to right, #5b39a8, #372d5e);
+    box-shadow: 0 6px 16px rgba(91, 57, 168, 0.4);
+}
+
+/* === Footer === */
+.login__footer {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    color: #666;
+}
+
+.login__register {
+    color: #7145d6;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.login__register:hover {
+    color: #372d5e;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+    .login__card {
+        padding: 2rem 1.4rem;
+    }
+
+    .login__title {
+        font-size: 1.6rem;
+    }
+
+    .login__subtitle {
+        font-size: 0.88rem;
+    }
+
+    .login__tab {
+        font-size: 0.85rem;
+    }
+
+    .login__button {
+        font-size: 0.95rem;
+    }
+
+    .login__extras {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
