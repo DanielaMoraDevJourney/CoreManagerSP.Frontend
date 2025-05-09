@@ -115,7 +115,7 @@ Accede a: `http://localhost:3000`
 
 ## Link de despliegue
 
-[Ver aplicación en producción]
+https://coremanagersp-frontend.onrender.com
 
 ---
 
