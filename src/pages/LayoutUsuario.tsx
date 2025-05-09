@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
-import './LayoutUsuario.css'; // opcional para estilos
+import './LayoutUsuario.css'; 
 
 export const LayoutUsuario = () => {
     return (

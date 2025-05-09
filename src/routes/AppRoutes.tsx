@@ -3,11 +3,7 @@ import { Login } from '../pages/Login/Login';
 import { RutaUsuario } from './RutaUsuario';
 import { LayoutUsuario } from '../pages/LayoutUsuario';
 import { SolicitudPrestamo } from '../pages/Simulador/SolicitudPrestamo';
-/*
-import { HistorialSimulaciones } from '../pages/Historial/HistorialSimulaciones';
-import { CompararEntidades } from '../pages/Comparacion/CompararEntidades';
-import { AnalisisEntidad } from '../pages/Analisis/AnalisisEntidad';
-import { AplicarMejoras } from '../pages/Mejoras/AplicarMejoras'; */
+import { EnConstruccion } from '../pages/Temporal/EnConstruccion';
 
 export const AppRoutes = () => (
     <BrowserRouter>
@@ -23,13 +19,11 @@ export const AppRoutes = () => (
                 }
             >
                 <Route path="solicitud" element={<SolicitudPrestamo />} />
-{/* 
-                <Route path="historial" element={<HistorialSimulaciones />} />
-                <Route path="comparar" element={<CompararEntidades />} />
-                <Route path="analisis/:entidadId" element={<AnalisisEntidad />} />
-                <Route path="mejoras" element={<AplicarMejoras />} /> */}
-
+                {/* Otras rutas futuras comentadas */}
             </Route>
+
+            {/* Ruta para páginas no encontradas o en construcción */}
+            <Route path="*" element={<EnConstruccion />} />
         </Routes>
     </BrowserRouter>
 );
