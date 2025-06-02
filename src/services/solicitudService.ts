@@ -1,4 +1,4 @@
-import axiosInstance from '../api/axios';
+import axiosInstance from '../api/axiosInstance';
 
 
 export const crearSolicitudPrestamo = async (payload: any) => {
@@ -9,7 +9,6 @@ export const crearSolicitudPrestamo = async (payload: any) => {
 
 export const getTiposPrestamo = async () => {
     const response = await axiosInstance.get('/SolicitudPrestamo/combo');
-    // Verifica si es un array plano o con $values
     const data = response.data;
     return Array.isArray(data) ? data : data.$values ?? [];
 };

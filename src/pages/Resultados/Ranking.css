@@ -1,0 +1,164 @@
+
+.ranking {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ranking__title {
+    font-size: 2rem;
+    color: #5b39a8;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.ranking__subtitle {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.ranking__compare-button {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(to right, #7145d6, #5b39a8);
+    color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.ranking__compare-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ranking__compare-button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 57, 168, 0.3);
+}
+
+.ranking__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.ranking__card {
+    background-color: #ffffff;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ranking__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.ranking__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ranking__card-name {
+    font-size: 1.2rem;
+    color: #372d5e;
+    margin: 0;
+}
+
+.ranking__checkbox-label {
+    font-size: 0.9rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.ranking__card-body {
+    margin: 1rem 0;
+    color: #444444;
+}
+
+.ranking__card-body p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+.ranking__card-estado {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.ranking__estado--apto {
+    background-color: #5cb85c;
+    color: #ffffff;
+}
+
+.ranking__estado--no-apto {
+    background-color: #d9534f;
+    color: #ffffff;
+}
+
+.ranking__card-footer {
+    text-align: center;
+}
+
+.ranking__card-button {
+    padding: 0.6rem 1.2rem;
+    background: #5b39a8;
+    color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.ranking__card-button:hover {
+    transform: translateY(-1px);
+    background: #372d5e;
+}
+
+.ranking__loading,
+.ranking__error,
+.ranking__empty {
+    text-align: center;
+    color: #666666;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .ranking {
+        padding: 1rem;
+    }
+
+    .ranking__title {
+        font-size: 1.6rem;
+    }
+
+    .ranking__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .ranking__card-name {
+        font-size: 1.1rem;
+    }
+
+    .ranking__card-body p {
+        font-size: 0.9rem;
+    }
+}

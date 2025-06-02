@@ -133,12 +133,10 @@
     }
 }
 
-/* Animación al aparecer los fieldset */
 .solicitud fieldset {
     animation: fadeInUp 0.6s ease both;
 }
 
-/* Efecto de enfoque bonito en input y select */
 .solicitud input:focus,
 .solicitud select:focus {
     border-color: #7145d6;
@@ -147,24 +145,20 @@
     transform: scale(1.015);
 }
 
-/* Inputs con transición más suave */
 .solicitud input,
 .solicitud select {
     transition: border 0.2s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-/* Animación sutil al hacer hover en inputs */
 .solicitud input:hover,
 .solicitud select:hover {
     border-color: #a089e9;
 }
 
-/* Botón con animación de pulse ligera */
 .solicitud button[type="submit"] {
     animation: pulse 2.5s infinite;
 }
 
-/* Fade In hacia arriba */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -177,7 +171,6 @@
     }
 }
 
-/* Pulso ligero para el botón */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(113, 69, 214, 0.4);

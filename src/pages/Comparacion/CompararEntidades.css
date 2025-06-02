@@ -1,0 +1,232 @@
+
+.comparar {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9fc;
+}
+
+
+.comparar__back-button {
+    background: none;
+    border: none;
+    color: #5b39a8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+}
+
+.comparar__back-button:hover {
+    color: #372d5e;
+}
+
+
+.comparar__title {
+    font-size: 2rem;
+    color: #372d5e;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.comparar__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+
+.comparar__card {
+    background-color: #ffffff;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.comparar__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.comparar__card-title {
+    font-size: 1.3rem;
+    color: #5b39a8;
+    margin: 0 0 0.8rem;
+    text-align: center;
+}
+
+
+.comparar__card-prob,
+.comparar__card-cuota {
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+}
+
+.comparar__card-prob strong,
+.comparar__card-cuota strong {
+    color: #372d5e;
+}
+
+
+.comparar__card-estado {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.6rem;
+    margin: 0.8rem 0;
+    display: inline-block;
+    color: #fff;
+}
+
+.comparar__card-estado--apto {
+    background-color: #5cb85c;
+}
+
+.comparar__card-estado--no-apto {
+    background-color: #d9534f;
+}
+
+.comparar__seccion-criterios {
+    margin-top: 1rem;
+}
+
+.comparar__subtitulo {
+    font-size: 1.1rem;
+    color: #4a138c;
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.4rem;
+}
+
+.comparar__lista-criterios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comparar__item-criterio {
+    background-color: #f7f7fc;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.comparar__criterio-nombre {
+    font-weight: 600;
+    color: #372d5e;
+    margin-bottom: 0.4rem;
+}
+
+.comparar__criterio-valores {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.comparar__valor-usuario,
+.comparar__valor-requerido {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.comparar__criterio-cumple {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    width: fit-content;
+    color: #fff;
+}
+
+.comparar__criterio--cumple {
+    background-color: #5cb85c;
+}
+
+.comparar__criterio--no-cumple {
+    background-color: #d9534f;
+}
+
+.comparar__seccion-mejoras {
+    margin-top: 1rem;
+}
+
+.comparar__lista-mejoras {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comparar__item-mejora {
+    background-color: #eef0fa;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.comparar__mejora-variable {
+    font-weight: 600;
+    color: #372d5e;
+    margin-bottom: 0.4rem;
+}
+
+.comparar__mejora-desc {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.4rem;
+}
+
+.comparar__mejora-info {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.comparar__mejora-obligatoria {
+    color: #d9534f;
+    font-weight: 600;
+}
+
+.comparar__mejora-prioridad {
+    color: #5b39a8;
+    font-weight: 600;
+}
+
+.comparar__loading,
+.comparar__error,
+.comparar__empty {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .comparar__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparar__item-criterio,
+    .comparar__item-mejora {
+        padding: 0.6rem;
+    }
+
+    .comparar__seccion-criterios,
+    .comparar__seccion-mejoras {
+        margin-top: 0.8rem;
+    }
+
+    .comparar__subtitulo {
+        font-size: 1rem;
+    }
+}
