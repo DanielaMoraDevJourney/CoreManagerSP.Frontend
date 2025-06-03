@@ -12,25 +12,26 @@ Este frontend fue diseñado como parte de un sistema completo de simulación de 
 
 ## Funcionalidades Principales
 
-* **Autenticación con JWT** para usuarios y administradores.
-* **Simulación de préstamos completa**, con:
+- **Autenticación con JWT** para usuarios y administradores.
+- **Simulación de préstamos completa**, con:
 
-  * Registro de datos financieros
-  * Análisis automático por entidad financiera
-  * Criterios de evaluación y recomendaciones visuales
-* **Comparación entre entidades financieras**
-* **Historial de simulaciones por usuario**
-* **Gestión de entidades financieras y tipos de préstamo** (panel de administrador)
-* **Aplicación de mejoras y reanálisis**
-* **Rutas protegidas por rol**
-* **Consumo directo de `CoreManagerSP.API` con Axios**
+  - Registro de datos financieros
+  - Análisis automático por entidad financiera
+  - Criterios de evaluación y recomendaciones visuales
+
+- **Comparación entre entidades financieras**
+- **Historial de simulaciones por usuario**
+- **Gestión de entidades financieras y tipos de préstamo** (panel de administrador)
+- **Aplicación de mejoras y reanálisis**
+- **Rutas protegidas por rol**
+- **Consumo directo de `CoreManagerSP.API` con Axios**
 
 ---
 
 ## Roles y Acceso
 
-* **Usuario:** puede registrarse, iniciar sesión, simular préstamos, aplicar mejoras y comparar entidades.
-* **Administrador:** acceso exclusivo a CRUD de usuarios, entidades financieras y tipos de préstamo.
+- **Usuario:** puede registrarse, iniciar sesión, simular préstamos, aplicar mejoras y comparar entidades.
+- **Administrador:** acceso exclusivo a CRUD de usuarios, entidades financieras y tipos de préstamo.
 
 ---
 
@@ -74,30 +75,30 @@ src/
 7. Historial de simulaciones
 8. Panel de administración:
 
-   * CRUD de administradores
-   * CRUD de usuarios
-   * CRUD de entidades financieras
-   * CRUD de tipos de préstamo
+   - CRUD de administradores
+   - CRUD de usuarios
+   - CRUD de entidades financieras
+   - CRUD de tipos de préstamo
 
 ---
 
 ## Instalación
 
 ```bash
-git clone https://github.com/DanielaMoraDevJourney/CoreManagerSP.Frontend.git
+git clone https://github.com/DanielaMoraDevJourney/SimuladorFrontend.git
 cd coremanager-frontend
 npm install
 ```
 
 ---
 
-##  Configuración
+## Configuración
 
 Ajusta la URL de la API en `src/api/axios.ts`:
 
 ```ts
 const api = axios.create({
-  baseURL: 'https://localhost:7086/api'
+  baseURL: "https://localhost:7086/api",
 });
 ```
 
@@ -115,14 +116,12 @@ Accede a: `http://localhost:3000`
 
 ## Link de despliegue
 
-https://coremanagersp-frontend.onrender.com
-
----
+## https://simuladorfrontend.onrender.com
 
 ## Autores y Créditos
 
 Proyecto desarrollado por **Daniela Mora**
-*7mo semestre de Ingeniería Web - 2025*
+_7mo semestre de Ingeniería Web - 2025_
 
 Repositorio del backend: [CoreManagerSP.API](https://github.com/DanielaMoraDevJourney/CoreManagerSP.API)
 
@@ -132,5 +131,3 @@ Repositorio del backend: [CoreManagerSP.API](https://github.com/DanielaMoraDevJo
 
 Este proyecto es de uso académico y puede adaptarse libremente para fines educativos.
 Se agradece dar créditos si se reutiliza con fines públicos o de aprendizaje compartido.
-
-
